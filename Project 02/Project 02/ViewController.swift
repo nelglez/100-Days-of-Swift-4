@@ -32,14 +32,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func tapOnce(_ sender: UIGestureRecognizer) {
+    @objc func tapOnce(_ sender: UIGestureRecognizer) {
         print("tap once")
         
         counter += 1
         updateCountNumber()
     }
     
-    func longTap(_ sender: UIGestureRecognizer) {
+    @objc func longTap(_ sender: UIGestureRecognizer) {
         print("long tap")
         if sender.state == .ended {
             timer.invalidate()
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func countNumberPlusOne() {
+    @objc func countNumberPlusOne() {
         counter += 1
         updateCountNumber()
     }
